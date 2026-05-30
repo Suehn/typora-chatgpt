@@ -1,0 +1,35 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Typora ChatGPT responsive tables</title>
+<link rel="stylesheet" href="../../typora-chatgpt.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f4f4f2; color: #0d0d0d; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  .page { min-height: 100vh; padding: 56px; }
+  .window { overflow: hidden; border: 1px solid rgba(13,13,13,.12); border-radius: 18px; background: #fff; box-shadow: 0 34px 80px rgba(0,0,0,.16), 0 8px 22px rgba(0,0,0,.08); }
+  .toolbar { height: 46px; display: grid; grid-template-columns: 110px 1fr 110px; align-items: center; padding: 0 16px; border-bottom: 1px solid rgba(13,13,13,.08); background: linear-gradient(#fbfbfb, #f5f5f5); }
+  .traffic { display: flex; gap: 8px; }
+  .traffic span { width: 14px; height: 14px; border-radius: 999px; display: block; }
+  .traffic span:nth-child(1) { background: #ff5f57; border: 1px solid #e0443e; }
+  .traffic span:nth-child(2) { background: #ffbd2e; border: 1px solid #dea123; }
+  .traffic span:nth-child(3) { background: #28c840; border: 1px solid #1aad2b; }
+  .title { text-align: center; color: #6b6b6b; font-size: 14px; font-weight: 500; }
+  .caption { margin: 0 0 22px; color: #5d5d5d; font-size: 18px; line-height: 1.5; }
+  .caption strong { color: #0d0d0d; font-weight: 650; }
+  content { display: block; container-type: inline-size; background: #fff; }
+  .window content { padding: 42px 56px 54px; }
+  #write { padding-bottom: 0 !important; }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+  .panel { border: 1px solid rgba(13,13,13,.10); border-radius: 18px; background: #fff; box-shadow: 0 18px 50px rgba(0,0,0,.08); overflow: hidden; }
+  .panel-label { padding: 14px 18px; border-bottom: 1px solid rgba(13,13,13,.08); background: #fafafa; color: #5d5d5d; font-size: 13px; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; }
+  .panel content { padding: 30px; }
+  .narrow { width: 430px; }
+  .desktop { width: 760px; }
+  .grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 28px; }
+  .grid .panel content { min-height: 340px; }
+</style></head><body><div class="page"><p class="caption"><strong>Responsive like the ChatGPT Markdown rendering model.</strong> The desktop column stays exact; narrow windows get safe edges and table-local overflow.</p><div class="split"><div class="panel desktop"><div class="panel-label">Desktop content column</div><content><div id="write">
+<h2>Desktop width</h2>
+<p>The default column preserves the ChatGPT desktop message width and wrapping rhythm.</p>
+<table><thead><tr><th>Dimension</th><th>Real assets</th><th>Financial assets</th></tr></thead><tbody><tr><td>Nature</td><td>Capacity to produce goods and services</td><td>Claim on future income or cash flow</td></tr><tr><td>Example</td><td>Land, factories, machines, knowledge</td><td>Stocks, bonds, deposits, fund shares</td></tr></tbody></table></div></content></div><div class="panel narrow"><div class="panel-label">Narrow Typora window</div><content><div id="write">
+<h2>窄窗口也留边界</h2>
+<p>窄窗口下保留 16-24px 安全边界；标准表格按内容列换行，宽表只在表格内部横向滚动。</p>
+<figure><table><thead><tr><th>维度</th><th>实物资产</th><th>金融资产</th><th>补充说明</th><th>例子</th></tr></thead><tbody><tr><td>本质</td><td>生产商品和服务的能力</td><td>对未来收益或现金流的索取权</td><td>宽表局部滚动，不撑开整个页面。</td><td>股票、债券、基金份额、租赁凭证</td></tr></tbody></table></figure></div></content></div></div></div></body></html>

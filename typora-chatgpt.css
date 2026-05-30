@@ -1,0 +1,1518 @@
+/*
+ * Typora ChatGPT Theme
+ * A Typora Markdown theme tuned to match the current ChatGPT web Markdown body.
+ */
+
+:root {
+  --cgpt-md-font: -apple-system-body, ui-sans-serif, -apple-system, "system-ui", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, "sans-serif", "Segoe UI Emoji", "Segoe UI Symbol";
+  --cgpt-md-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --cgpt-md-text: rgb(13, 13, 13);
+  --cgpt-md-width-compact: 640px;
+  --cgpt-md-width-expanded: 768px;
+  --cgpt-md-width: var(--cgpt-md-width-expanded);
+  --cgpt-md-active-width: var(--cgpt-md-width);
+  --cgpt-md-code-bg: rgb(236, 236, 236);
+  --cgpt-md-code-card-bg: rgb(249, 249, 249);
+  --cgpt-md-code-card-border: rgba(13, 13, 13, 0.05);
+  --cgpt-md-code-card-border-rule: 1px solid rgba(13, 13, 13, 0.05);
+  --cgpt-md-code-card-radius: 24px;
+  --cgpt-md-code-header-height: 48px;
+  --cgpt-md-code-card-padding-top: 48px;
+  --cgpt-md-code-card-padding-x: 20px;
+  --cgpt-md-code-card-padding-bottom: 12px;
+  --cgpt-md-border: rgba(0, 0, 0, 0.15);
+  --cgpt-md-syntax-operator: rgb(186, 67, 122);
+  --cgpt-md-syntax-name: rgb(107, 58, 180);
+  --cgpt-md-syntax-string: rgb(0, 134, 53);
+  --cgpt-md-syntax-number: rgb(185, 72, 13);
+  --cgpt-md-syntax-meta: rgb(0, 79, 153);
+  --cgpt-md-syntax-command: rgb(185, 72, 13);
+  --cgpt-md-syntax-option: rgb(186, 142, 0);
+  --cgpt-md-syntax-tag: rgb(0, 79, 153);
+}
+
+#write {
+  font-family: var(--cgpt-md-font);
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: var(--cgpt-md-text);
+  letter-spacing: normal;
+  overflow-wrap: break-word;
+  word-break: normal;
+  max-width: var(--cgpt-md-active-width);
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+#write :where(h1) {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: rgb(13, 13, 13);
+  margin-top: 0px;
+  margin-bottom: 8px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+
+#write :where(h2) {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: rgb(13, 13, 13);
+  margin-top: 16px;
+  margin-bottom: 4px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+
+#write :where(h3) {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+  color: rgb(13, 13, 13);
+  margin-top: 16px;
+  margin-bottom: 4px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+
+#write :where(h4) {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: rgb(13, 13, 13);
+  margin-top: 16px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+
+#write :where(h5) {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  color: rgb(13, 13, 13);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+
+#write :where(h6) {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: rgb(13, 13, 13);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+
+#write :where(p) {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: rgb(13, 13, 13);
+  margin-top: 8px;
+  margin-bottom: 4px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+
+#write :where(strong) {
+  font-weight: 600;
+}
+
+
+#write :where(em) {
+  font-style: italic;
+}
+
+
+#write :where(del, s) {
+  text-decoration-line: line-through;
+}
+
+
+#write :where(.katex) {
+  display: inline;
+  font-size: 19.36px;
+  line-height: 23.232px;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(13, 13, 13);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+#write :where(.katex-display) {
+  display: block;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(13, 13, 13);
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  overflow-x: auto;
+}
+
+
+#write :where(a) {
+  color: var(--cgpt-md-text);
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: rgb(143, 143, 143);
+  text-underline-offset: 2px;
+}
+
+
+#write :where(a)::after {
+  content: '↗';
+  display: inline-block;
+  font-size: 16px;
+  line-height: 16px;
+  width: 12px;
+  height: 12px;
+  margin-left: 0.125rem;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+
+#write :where(p code, li code, td code, th code, blockquote code) {
+  font-family: var(--cgpt-md-mono);
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 500;
+  background-color: var(--cgpt-md-code-bg);
+  border-radius: 4px;
+  padding-top: 2.4px;
+  padding-right: 4.8px;
+  padding-bottom: 2.4px;
+  padding-left: 4.8px;
+  white-space: nowrap;
+}
+
+
+#write :where(pre) {
+  position: relative;
+  font-family: var(--cgpt-md-mono);
+  font-size: 12.25px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--cgpt-md-text);
+  background-color: var(--cgpt-md-code-card-bg);
+  border: var(--cgpt-md-code-card-border-rule);
+  border-radius: var(--cgpt-md-code-card-radius);
+  margin-top: 16px;
+  margin-bottom: 4px;
+  padding-top: var(--cgpt-md-code-card-padding-top);
+  padding-right: var(--cgpt-md-code-card-padding-x);
+  padding-bottom: var(--cgpt-md-code-card-padding-bottom);
+  padding-left: var(--cgpt-md-code-card-padding-x);
+  overflow-x: auto;
+  white-space: pre;
+}
+
+
+#write :where(pre)::before {
+  content: '</>';
+  position: absolute;
+  left: var(--cgpt-md-code-card-padding-x);
+  right: 6px;
+  top: 6px;
+  height: 24.0001px;
+  font-family: var(--cgpt-md-font);
+  font-size: 14px;
+  line-height: 24.0001px;
+  font-weight: 400;
+  color: var(--cgpt-md-text);
+}
+
+
+#write :where(pre code) {
+  font-family: var(--cgpt-md-mono);
+  font-size: 12.25px;
+  line-height: 20px;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  white-space: pre;
+}
+
+
+#write :where(pre span) {
+  background-color: transparent;
+  padding: 0;
+}
+
+
+#write :where([class~="ͼg"], .tok-operator) {
+  color: var(--cgpt-md-syntax-operator);
+}
+
+
+#write :where([class~="ͼm"], .tok-name) {
+  color: var(--cgpt-md-syntax-name);
+}
+
+
+#write :where([class~="ͼk"], .tok-string) {
+  color: var(--cgpt-md-syntax-string);
+}
+
+
+#write :where([class~="ͼj"], .tok-number) {
+  color: var(--cgpt-md-syntax-number);
+}
+
+
+#write :where([class~="ͼf"], .tok-meta) {
+  color: var(--cgpt-md-syntax-meta);
+}
+
+
+#write :where([class~="ͼl"], .tok-command) {
+  color: var(--cgpt-md-syntax-command);
+}
+
+
+#write :where([class~="ͼn"], .tok-option) {
+  color: var(--cgpt-md-syntax-option);
+}
+
+
+#write :where([class~="ͼo"], .tok-tag) {
+  color: var(--cgpt-md-syntax-tag);
+}
+
+
+#write :where(blockquote) {
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  padding-top: 8px;
+  padding-right: 0px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+}
+
+
+#write :where(blockquote)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 8px;
+  bottom: 8px;
+  width: 4px;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
+
+
+#write :where(blockquote > p) {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 4px;
+}
+
+
+#write :where(blockquote ul, blockquote ol) {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  padding-left: 26px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
+#write :where(ul) {
+  list-style-type: disc;
+  padding-left: 26px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
+#write :where(ol) {
+  list-style-type: decimal;
+  padding-left: 26px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
+#write :where(li) {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 6px;
+}
+
+
+#write :where(li)::marker {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  color: rgb(13, 13, 13);
+}
+
+
+#write :where(li > p) {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  line-height: 26px;
+}
+
+
+#write :where(li > ul, li > ol) {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 26px;
+}
+
+
+#write :where(ul.contains-task-list) {
+  list-style-type: disc;
+  padding-left: 26px;
+}
+
+
+#write :where(li.task-list-item) {
+  list-style-type: disc;
+  padding-left: 6px;
+}
+
+
+#write :where(li.task-list-item)::marker {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+  color: rgb(13, 13, 13);
+}
+
+
+#write :where(li.task-list-item input[type='checkbox']) {
+  display: inline-block;
+  position: static;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  vertical-align: -3px;
+  accent-color: rgb(0, 79, 153);
+}
+
+
+#write :where(.TyagGW_tableContainer, figure) {
+  overflow-x: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
+#write :where(table) {
+  border-collapse: separate;
+  border-spacing: 0px;
+  font-size: 14px;
+  line-height: 24.0001px;
+  min-width: var(--cgpt-md-active-width);
+  width: 100%;
+}
+
+
+#write :where(th) {
+  padding-top: 8px;
+  padding-right: 24px;
+  padding-bottom: 8px;
+  padding-left: 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  font-weight: 600;
+}
+
+
+#write :where(td) {
+  padding-top: 10px;
+  padding-right: 24px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  border-bottom: 1px solid rgba(13, 13, 13, 0.05);
+}
+
+
+#write :where(hr) {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+
+
+/* Typora host adapter. Keep layout fidelity in CSS rather than using app zoom. */
+
+html,
+body,
+content {
+  background: #fff;
+}
+
+content {
+  container-type: inline-size;
+}
+
+#write {
+  --cgpt-md-active-width: var(--cgpt-md-width-compact);
+  font-family: var(--cgpt-md-font);
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--cgpt-md-text);
+  box-sizing: border-box;
+  max-width: var(--cgpt-md-active-width) !important;
+  width: min(100%, var(--cgpt-md-active-width)) !important;
+  margin: 0 auto;
+  padding-top: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 70px !important;
+  padding-left: 0 !important;
+  word-break: normal;
+  overflow-wrap: break-word;
+  counter-reset: cgpt-footnote-ref;
+}
+
+@container (min-width: 64rem) {
+  #write {
+    --cgpt-md-active-width: var(--cgpt-md-width-expanded);
+  }
+}
+
+#write :where(.md-heading, .md-p, p, h1, h2, h3, h4, h5, h6) {
+  white-space: normal;
+}
+
+#write :where(li.task-list-item > p, li.md-task-list-item > p) {
+  display: inline;
+}
+
+#write :where(li.task-list-item > input[type='checkbox'] + p, li.md-task-list-item > input[type='checkbox'] + p) {
+  margin-left: 0.25em;
+}
+
+#write :where(p code, li code, td code, th code, blockquote code, .md-inline-code) {
+  font-family: var(--cgpt-md-mono);
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 500;
+  background-color: var(--cgpt-md-code-bg);
+  border-radius: 4px;
+  padding: 2.4px 4.8px 2.4px 4.8px;
+  white-space: nowrap;
+}
+
+#write :where(pre.md-fences, .md-fences, pre[mdtype="fences"]) {
+  position: relative !important;
+  display: block !important;
+  font-family: var(--cgpt-md-mono) !important;
+  font-size: 12.25px !important;
+  line-height: 20px !important;
+  font-weight: 400 !important;
+  color: var(--cgpt-md-text) !important;
+  background-color: rgb(249, 249, 249) !important;
+  border: 1px solid rgba(13, 13, 13, 0.05) !important;
+  border-radius: var(--cgpt-md-code-card-radius) !important;
+  margin-top: 16px !important;
+  margin-bottom: 4px !important;
+  padding-top: var(--cgpt-md-code-card-padding-top) !important;
+  padding-right: 20px !important;
+  padding-bottom: 12px !important;
+  padding-left: 20px !important;
+  overflow-x: auto !important;
+  white-space: pre !important;
+}
+
+#write :where(pre.md-fences, .md-fences, pre[mdtype="fences"])::before {
+  content: "</> " attr(lang);
+  position: absolute;
+  top: 6px;
+  left: 20px;
+  right: 6px;
+  height: 24.0001px;
+  font-family: var(--cgpt-md-font);
+  font-size: 14px;
+  line-height: 24.0001px;
+  font-weight: 400;
+  color: var(--cgpt-md-text);
+  white-space: nowrap;
+}
+
+#write pre.md-fences[lang=""]::before,
+#write .md-fences[lang=""]::before {
+  content: "</>";
+}
+
+#write pre.md-fences[lang="bash"]::before { content: "</> Bash"; }
+#write pre.md-fences[lang="cpp"]::before { content: "</> C++"; }
+#write pre.md-fences[lang="diff"]::before { content: "</> Diff"; }
+#write pre.md-fences[lang="env"]::before { content: "</> env"; }
+#write pre.md-fences[lang="html"]::before { content: "</> HTML"; }
+#write pre.md-fences[lang="java"]::before { content: "</> Java"; }
+#write pre.md-fences[lang="javascript"]::before { content: "</> JavaScript"; }
+#write pre.md-fences[lang="json"]::before { content: "</> JSON"; }
+#write pre.md-fences[lang="markdown"]::before { content: "</> Markdown"; }
+#write pre.md-fences[lang="mermaid"]::before { content: "</> Mermaid"; }
+#write pre.md-fences[lang="python"]::before { content: "</> Python"; }
+#write pre.md-fences[lang="sql"]::before { content: "</> SQL"; }
+#write pre.md-fences[lang="text"]::before { content: "</> text"; }
+#write pre.md-fences[lang="yaml"]::before { content: "</> YAML"; }
+
+#write .md-fences :where(code, pre, span),
+#write pre.md-fences :where(code, pre, span),
+#write .md-fences .CodeMirror,
+#write .md-fences .CodeMirror-scroll,
+#write .md-fences .CodeMirror-sizer,
+#write .md-fences .CodeMirror-lines,
+#write .md-fences .CodeMirror-code,
+#write .md-fences .CodeMirror-line,
+#write .md-fences .CodeMirror-line span,
+#write .md-fences pre.CodeMirror-line {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: var(--cgpt-md-mono) !important;
+  font-size: 12.25px !important;
+  line-height: 20px !important;
+  white-space: pre !important;
+}
+
+#write .md-fences .CodeMirror pre {
+  padding: 0 !important;
+}
+
+#write .md-fences pre::before,
+#write pre.md-fences :where(pre)::before {
+  content: none !important;
+}
+
+#write .md-fences .CodeMirror-gutters,
+#write .md-fences .CodeMirror-gutter,
+#write .md-fences .CodeMirror-gutter-wrapper,
+#write .md-fences .CodeMirror-linenumber,
+#write .cm-s-inner .CodeMirror-linenumber {
+  display: none !important;
+}
+
+#write .md-fences.md-fences-with-lineno,
+#write .md-fences.mock-cm.md-fences-with-lineno {
+  padding-left: 20px !important;
+}
+
+#write .CodeMirror-activeline-background,
+#write .CodeMirror-selected,
+#write .CodeMirror-selectedtext {
+  background: transparent !important;
+}
+
+#write .cm-s-inner :where(.cm-keyword, .cm-operator, .cm-punctuation) {
+  color: var(--cgpt-md-syntax-operator) !important;
+}
+
+#write .cm-s-inner :where(.cm-variable, .cm-variable-2, .cm-def, .cm-property, .cm-builtin, .cm-attribute, .cm-tag) {
+  color: var(--cgpt-md-syntax-name) !important;
+}
+
+#write .cm-s-inner :where(.cm-string, .cm-string-2) {
+  color: var(--cgpt-md-syntax-string) !important;
+}
+
+#write .cm-s-inner :where(.cm-number, .cm-atom) {
+  color: var(--cgpt-md-syntax-number) !important;
+}
+
+#write .cm-s-inner :where(.cm-meta) {
+  color: var(--cgpt-md-syntax-meta) !important;
+}
+
+#write .cm-s-inner :where(.cm-comment) {
+  color: var(--cgpt-md-syntax-command) !important;
+}
+
+#write pre.md-fences[lang="bash"] .cm-s-inner :where(.cm-builtin, .cm-def, .cm-variable, .cm-variable-2),
+#write .md-fences[lang="bash"] .cm-s-inner :where(.cm-builtin, .cm-def, .cm-variable, .cm-variable-2) {
+  color: var(--cgpt-md-syntax-command) !important;
+}
+
+#write pre.md-fences[lang="bash"] .cm-s-inner :where(.cm-attribute, .cm-qualifier),
+#write .md-fences[lang="bash"] .cm-s-inner :where(.cm-attribute, .cm-qualifier) {
+  color: var(--cgpt-md-syntax-option) !important;
+}
+
+#write pre.md-fences[lang="json"] .cm-s-inner :where(.cm-property),
+#write .md-fences[lang="json"] .cm-s-inner :where(.cm-property) {
+  color: var(--cgpt-md-syntax-string) !important;
+}
+
+#write pre.md-fences[lang="html"] .cm-s-inner :where(.cm-tag, .cm-bracket),
+#write .md-fences[lang="html"] .cm-s-inner :where(.cm-tag, .cm-bracket),
+#write pre.md-fences[lang="xml"] .cm-s-inner :where(.cm-tag, .cm-bracket),
+#write .md-fences[lang="xml"] .cm-s-inner :where(.cm-tag, .cm-bracket) {
+  color: var(--cgpt-md-syntax-tag) !important;
+}
+
+#write pre.md-fences[lang="markdown"] .CodeMirror-line span,
+#write pre.md-fences[lang="text"] .CodeMirror-line span,
+#write pre.md-fences[lang="env"] .CodeMirror-line span,
+#write .md-fences[lang="markdown"] .CodeMirror-line span,
+#write .md-fences[lang="text"] .CodeMirror-line span,
+#write .md-fences[lang="env"] .CodeMirror-line span {
+  color: var(--cgpt-md-text) !important;
+  text-decoration: none !important;
+}
+
+#write :where(.md-alert) {
+  position: relative;
+  color: var(--cgpt-md-text) !important;
+  margin-top: 0px !important;
+  margin-bottom: 8px !important;
+  padding-top: 8px !important;
+  padding-right: 0 !important;
+  padding-bottom: 8px !important;
+  padding-left: 24px !important;
+  border-left: 0 !important;
+}
+
+#write :where(.md-alert)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 4px;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
+
+#write :where(.md-alert-text, .md-alert-text-note, .md-alert-text-important, .md-alert-text-warning, .md-alert-text-tip, .md-alert-text-caution) {
+  color: var(--cgpt-md-text) !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-weight: 400 !important;
+}
+
+#write :where(.md-alert svg) {
+  display: none !important;
+}
+
+#write :where(sup.md-footnote) {
+  counter-increment: cgpt-footnote-ref;
+  position: relative;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  color: var(--cgpt-md-text);
+  font-size: 12px;
+  line-height: 0px;
+  font-weight: 400;
+  text-decoration: none;
+  top: -6px;
+}
+
+#write :where(sup.md-footnote a) {
+  color: var(--cgpt-md-text) !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  text-decoration: none !important;
+}
+
+#write :where(sup.md-footnote a)::before {
+  content: counter(cgpt-footnote-ref);
+  display: inline;
+  font-size: 12px;
+  line-height: 0px;
+  font-weight: 400;
+}
+
+#write :where(sup.md-footnote a)::after {
+  content: "↗";
+  display: inline-block;
+  font-size: 12px;
+  line-height: 0px;
+  width: 0.75em;
+  height: 0.75em;
+  margin-left: 0.125rem;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+#write :where(.footnotes, .footnotes-area) {
+  opacity: 1;
+  color: var(--cgpt-md-text);
+  font-size: 16px;
+  line-height: 26px;
+  margin-top: 0;
+  margin-bottom: 4px;
+  padding-bottom: 0;
+}
+
+#write :where(.footnote-line) {
+  font-size: 16px;
+  line-height: 26px;
+  margin-top: 0;
+}
+
+#write :where(.footnotes a, .footnotes-area a, .reversefootnote)::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Current ChatGPT Markdown refinement layer. */
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: rgb(13, 13, 13);
+  --md-char-color: rgb(143, 143, 143);
+  --meta-content-color: rgb(93, 93, 93);
+  --monospace: var(--cgpt-md-mono);
+  --side-bar-bg-color: #ffffff;
+  --item-hover-bg-color: rgba(13, 13, 13, 0.04);
+  --item-hover-text-color: rgb(13, 13, 13);
+  --window-border: 1px solid rgba(13, 13, 13, 0.08);
+  --cgpt-md-code-bg: rgba(13, 13, 13, 0.04);
+  --cgpt-md-code-border: rgba(13, 13, 13, 0.08);
+  --cgpt-md-code-card-bg: rgb(249, 249, 249);
+  --cgpt-md-code-card-border: rgba(13, 13, 13, 0.05);
+  --cgpt-md-code-card-border-rule: 1px solid var(--cgpt-md-code-card-border);
+  --cgpt-md-border: rgba(13, 13, 13, 0.15);
+  --cgpt-md-border-subtle: rgba(13, 13, 13, 0.10);
+  --cgpt-md-secondary: rgb(93, 93, 93);
+  --cgpt-md-citation-bg: rgb(244, 244, 244);
+  --cgpt-md-citation-count: rgb(143, 143, 143);
+  --cgpt-md-syntax-base: rgb(13, 13, 13);
+  --cgpt-md-syntax-comment: #4f4f4f;
+  --cgpt-md-syntax-meta: #004f99;
+  --cgpt-md-syntax-operator: #ba437a;
+  --cgpt-md-syntax-name: #6b3ab4;
+  --cgpt-md-syntax-string: #008635;
+  --cgpt-md-syntax-number: #b9480d;
+  --cgpt-md-syntax-command: #b9480d;
+  --cgpt-md-syntax-option: #ba8e00;
+  --cgpt-md-syntax-tag: #004f99;
+  --cgpt-md-syntax-invalid: #ba2623;
+}
+
+html,
+body,
+content {
+  color: var(--cgpt-md-text);
+  background: var(--bg-color);
+  font-family: var(--cgpt-md-font);
+}
+
+#write {
+  color: var(--cgpt-md-text);
+  font-family: var(--cgpt-md-font);
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  letter-spacing: 0;
+  overflow-wrap: break-word;
+  word-break: normal;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#write :where(p) {
+  margin: 8px 0 4px 0;
+  color: var(--cgpt-md-text);
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+#write :where(p + p) {
+  margin: 16px 0;
+}
+
+#write :where(h1, h2, h3, h4, h5, h6) {
+  color: var(--cgpt-md-text);
+  font-family: var(--cgpt-md-font);
+  font-weight: 600;
+  letter-spacing: 0;
+  border: 0;
+}
+
+#write :where(h1) {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+#write :where(h2) {
+  margin: 16px 0 4px 0;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+#write :where(h3) {
+  margin: 16px 0 4px 0;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+#write :where(h4) {
+  margin: 16px 0 0 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#write :where(h5) {
+  margin: 0;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+#write :where(h6) {
+  margin: 0;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+#write :where(h1 code, h2 code, h3 code, h4 code, h5 code, h6 code,
+p code, li code, td code, th code, blockquote code, .md-inline-code) {
+  font-family: var(--cgpt-md-mono);
+  font-size: 0.875em;
+  line-height: inherit;
+  font-weight: 500;
+  color: var(--cgpt-md-text);
+  background: var(--cgpt-md-code-bg);
+  box-shadow: inset 0 0 0 1px var(--cgpt-md-code-border);
+  border-radius: 4px;
+  padding: 2.4px 4.8px;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+#write :where(h3 code) {
+  font-size: 0.9em;
+}
+
+#write :where(pre.md-fences, .md-fences, pre[mdtype="fences"], pre) {
+  color: var(--cgpt-md-text) !important;
+  background: var(--cgpt-md-code-card-bg) !important;
+  border: var(--cgpt-md-code-card-border-rule) !important;
+  box-shadow: none !important;
+}
+
+#write :where(pre.md-fences, .md-fences, pre[mdtype="fences"])::before {
+  color: var(--cgpt-md-text);
+}
+
+#write pre.md-fences[lang="sh"]::before,
+#write pre.md-fences[lang="shell"]::before,
+#write pre.md-fences[lang="zsh"]::before,
+#write .md-fences[lang="sh"]::before,
+#write .md-fences[lang="shell"]::before,
+#write .md-fences[lang="zsh"]::before {
+  content: "</> Bash";
+}
+
+#write pre.md-fences[lang="js"]::before,
+#write pre.md-fences[lang="jsx"]::before,
+#write .md-fences[lang="js"]::before,
+#write .md-fences[lang="jsx"]::before {
+  content: "</> JavaScript";
+}
+
+#write pre.md-fences[lang="md"]::before,
+#write .md-fences[lang="md"]::before {
+  content: "</> Markdown";
+}
+
+#write pre.md-fences[lang="py"]::before,
+#write .md-fences[lang="py"]::before {
+  content: "</> Python";
+}
+
+#write pre.md-fences[lang="yml"]::before,
+#write .md-fences[lang="yml"]::before {
+  content: "</> YAML";
+}
+
+#write .cm-s-inner,
+#write .cm-s-inner .CodeMirror-line,
+#write .cm-s-inner .CodeMirror-line span,
+#write .hljs {
+  color: var(--cgpt-md-syntax-base) !important;
+}
+
+#write .cm-s-inner :where(.cm-keyword, .cm-operator, .cm-punctuation),
+#write :where(.hljs-doctag, .hljs-keyword, .hljs-operator, .hljs-template-tag, .hljs-formula) {
+  color: var(--cgpt-md-syntax-operator) !important;
+}
+
+#write .cm-s-inner :where(.cm-variable, .cm-variable-2, .cm-def, .cm-property, .cm-builtin, .cm-attribute, .cm-tag),
+#write :where(.hljs-built_in, .hljs-title.function_, .hljs-variable, .hljs-template-variable, .hljs-type) {
+  color: var(--cgpt-md-syntax-name) !important;
+}
+
+#write .cm-s-inner :where(.cm-string, .cm-string-2),
+#write :where(.hljs-meta .hljs-string, .hljs-regexp, .hljs-string, .hljs-addition) {
+  color: var(--cgpt-md-syntax-string) !important;
+}
+
+#write .cm-s-inner :where(.cm-number, .cm-atom),
+#write :where(.hljs-literal, .hljs-number, .hljs-symbol, .hljs-bullet) {
+  color: var(--cgpt-md-syntax-number) !important;
+}
+
+#write .cm-s-inner :where(.cm-comment),
+#write :where(.hljs-code, .hljs-comment, .hljs-quote) {
+  color: var(--cgpt-md-syntax-comment) !important;
+  font-style: italic;
+}
+
+#write .cm-s-inner :where(.cm-meta),
+#write :where(.hljs-name, .hljs-selector-tag, .hljs-selector-pseudo, .hljs-link, .hljs-meta, .hljs-selector-id) {
+  color: var(--cgpt-md-syntax-tag) !important;
+}
+
+#write :where(.hljs-section, .hljs-title) {
+  color: var(--cgpt-md-syntax-option) !important;
+}
+
+#write :where(.hljs-deletion) {
+  color: var(--cgpt-md-syntax-invalid) !important;
+}
+
+#write :where(blockquote, .md-alert) {
+  position: relative;
+  margin: 0 0 8px 0 !important;
+  padding: 8px 0 8px 24px !important;
+  border: 0 !important;
+  color: var(--cgpt-md-text) !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-weight: 400 !important;
+}
+
+#write :where(blockquote)::after,
+#write :where(.md-alert)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 4px;
+  background-color: var(--cgpt-md-border);
+  border-radius: 2px;
+}
+
+#write :where(blockquote > p, .md-alert-text, .md-alert-text-note,
+.md-alert-text-important, .md-alert-text-warning, .md-alert-text-tip,
+.md-alert-text-caution) {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--cgpt-md-text) !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-weight: 400 !important;
+}
+
+#write :where(ul, ol) {
+  margin: 0;
+  padding-left: 26px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+#write :where(li) {
+  min-height: 26px;
+  margin: 0;
+  padding-left: 6px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+#write :where(li)::marker {
+  color: currentColor;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+#write :where(ul.contains-task-list, ul.task-list, ul.md-task-list) {
+  padding-left: 0 !important;
+  list-style-type: none !important;
+}
+
+#write :where(li.task-list-item, li.md-task-list-item) {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-height: 26px;
+  padding-left: 0 !important;
+  list-style-type: none !important;
+}
+
+#write :where(li.task-list-item)::marker,
+#write :where(li.md-task-list-item)::marker {
+  content: "";
+}
+
+#write :where(li.task-list-item > p, li.md-task-list-item > p) {
+  display: block;
+  margin: 0;
+  min-width: 0;
+}
+
+#write :where(li.task-list-item > input[type="checkbox"],
+li.md-task-list-item > input[type="checkbox"]) {
+  appearance: none;
+  -webkit-appearance: none;
+  display: inline-block;
+  flex: 0 0 auto;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  border: 1px solid rgb(142, 142, 142);
+  border-radius: 4px;
+  background: transparent;
+  vertical-align: -3px;
+}
+
+#write :where(li.task-list-item > input[type="checkbox"]:checked,
+li.md-task-list-item > input[type="checkbox"]:checked) {
+  border-color: rgb(0, 122, 255);
+  background-color: rgb(0, 122, 255);
+}
+
+#write :where(li.task-list-item > input[type="checkbox"]:checked,
+li.md-task-list-item > input[type="checkbox"]:checked)::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 9px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+}
+
+#write :where(.TyagGW_tableContainer, figure, .md-table-fig) {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+#write :where(table) {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 100%;
+  width: 100%;
+  max-width: none;
+  table-layout: auto;
+  overflow: visible;
+  border: 0;
+  margin: 0;
+  color: var(--cgpt-md-text);
+  font-family: var(--cgpt-md-font);
+  font-size: 14px;
+  line-height: 24px;
+}
+
+#write :where(th, td) {
+  border: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  text-align: start;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+#write :where(th:not(:first-child), td:not(:first-child)) {
+  padding-inline-start: 8px;
+}
+
+#write :where(th:not(:last-child), td:not(:last-child)) {
+  padding-inline-end: 24px;
+}
+
+#write :where(th:last-child, td:last-child) {
+  padding-inline-end: 40px;
+}
+
+#write :where(thead th) {
+  padding-block: 8px;
+  border-bottom: 1px solid var(--cgpt-md-border);
+  color: var(--cgpt-md-text);
+  font-weight: 600;
+  line-height: 16px;
+  vertical-align: bottom;
+}
+
+#write :where(tbody td) {
+  padding-block: 10px;
+  border-bottom: 1px solid var(--cgpt-md-border-subtle);
+  vertical-align: baseline;
+}
+
+#write :where(tbody tr:last-child td) {
+  border-bottom: 0;
+  padding-bottom: 24px;
+}
+
+#write :where(hr) {
+  border: 0;
+  border-top: 1px solid var(--cgpt-md-border);
+  margin: 28px 0;
+}
+
+#write :where(a) {
+  color: var(--cgpt-md-text);
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: rgb(143, 143, 143);
+  text-underline-offset: 2px;
+}
+
+#write :where(a.chatgpt-source-citation-link, a[data-chatgpt-source-citation="true"]) {
+  display: inline-flex;
+  align-items: center;
+  max-width: 15ch;
+  height: 18px;
+  min-height: 18px;
+  padding: 0 8px;
+  margin-left: 4px;
+  position: relative;
+  top: -0.094rem;
+  border-radius: 12px;
+  overflow: hidden;
+  color: var(--cgpt-md-secondary);
+  background: var(--cgpt-md-citation-bg);
+  font-size: 9px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+
+#write :where(a.chatgpt-source-citation-link, a[data-chatgpt-source-citation="true"])::after {
+  content: none;
+}
+
+#write :where(a.chatgpt-source-citation-link[data-chatgpt-source-count],
+a[data-chatgpt-source-citation="true"][data-chatgpt-source-count])::after {
+  content: attr(data-chatgpt-source-count);
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  height: 16px;
+  margin-left: 3px;
+  margin-right: -4px;
+  padding: 0 4px;
+  color: var(--cgpt-md-citation-count);
+  font-size: 9px;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+#write :where(sup.md-footnote, sup.footnote-ref, sup:has(> a[data-footnote-ref])) {
+  display: inline-flex;
+  position: static;
+  top: auto;
+  margin-left: 4px;
+  padding: 0;
+  background: transparent;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  vertical-align: baseline;
+}
+
+#write :where(sup.md-footnote a, sup.footnote-ref a, a[data-footnote-ref]) {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  height: 25px;
+  min-height: 25px;
+  padding: 0 8px;
+  border-radius: 999px;
+  color: rgb(95, 95, 95) !important;
+  background: rgba(13, 13, 13, 0.04);
+  font-size: 12px !important;
+  line-height: 20px !important;
+  font-weight: 500;
+  text-decoration: none !important;
+}
+
+#write :where(sup.md-footnote a)::before {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+#write :where(sup.md-footnote a)::after,
+#write :where(sup.footnote-ref a)::after,
+#write :where(a[data-footnote-ref])::after,
+#write :where(.footnote-backref)::after,
+#write :where([data-footnote-backref])::after {
+  content: none !important;
+  display: none !important;
+}
+
+#write :where(.footnotes, .footnotes-area) {
+  margin-top: 16px;
+  padding-top: 0;
+  border-top: 0;
+  color: var(--cgpt-md-text);
+  font-size: 16px;
+  line-height: 26px;
+}
+
+#write :where(details) {
+  margin: 0 0 16px 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(127, 127, 127, 0.22);
+  border-radius: 12px;
+  background: rgba(127, 127, 127, 0.05);
+}
+
+#write :where(summary) {
+  cursor: default;
+  font-weight: 600;
+}
+
+#write :where(kbd) {
+  display: inline-block;
+  min-width: 1.5em;
+  padding: 0.08em 0.45em;
+  border: 1px solid rgba(127, 127, 127, 0.32);
+  border-bottom-width: 2px;
+  border-radius: 6px;
+  background: rgba(127, 127, 127, 0.08);
+  box-shadow: inset 0 -1px 0 rgba(127, 127, 127, 0.15);
+  font: 0.92em var(--cgpt-md-mono);
+}
+
+#write :where(mark) {
+  color: inherit;
+  background: rgba(255, 225, 92, 0.55);
+  border-radius: 0.2em;
+  padding: 0 0.2em;
+}
+
+@media print {
+  html,
+  body,
+  content {
+    background: #ffffff !important;
+  }
+
+  #write {
+    max-width: 768px !important;
+    width: 768px !important;
+    padding-bottom: 0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  #write :where(pre.md-fences, .md-fences, pre[mdtype="fences"], pre),
+  #write :where(code, .md-inline-code),
+  #write :where(a.chatgpt-source-citation-link, a[data-chatgpt-source-citation="true"]) {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* Final Typora host overrides for rules whose earlier TypeMark reset uses
+   high-specificity CodeMirror or footnote pseudo selectors. */
+
+#write .md-fences .cm-s-inner .CodeMirror-line span.cm-keyword,
+#write pre.md-fences .cm-s-inner .CodeMirror-line span.cm-keyword,
+#write .md-fences .cm-s-inner .CodeMirror-line span.cm-operator,
+#write pre.md-fences .cm-s-inner .CodeMirror-line span.cm-operator,
+#write .md-fences .cm-s-inner .CodeMirror-line span.cm-punctuation,
+#write pre.md-fences .cm-s-inner .CodeMirror-line span.cm-punctuation {
+  color: var(--cgpt-md-syntax-operator) !important;
+}
+
+#write .md-fences .cm-s-inner .CodeMirror-line span.cm-variable,
+#write pre.md-fences .cm-s-inner .CodeMirror-line span.cm-variable,
+#write .md-fences .cm-s-inner .CodeMirror-line span.cm-variable-2,
+#write pre.md-fences .cm-s-inner .CodeMirror-line span.cm-variable-2,
+#write .md-fences .cm-s-inner .CodeMirror-line span.cm-def,
+#write pre.md-fences .cm-s-inner .CodeMirror-line span.cm-def,
+#write .md-fences .cm-s-inner .CodeMirror-line span.cm-property,
+#write pre.md-fences .cm-s-inner .CodeMirror-line span.cm-property,
+#write .md-fences .cm-s-inner .CodeMirror-line span.cm-builtin,
+#write pre.md-fences .cm-s-inner .CodeMirror-line span.cm-builtin,
+#write .md-fences .cm-s-inner .CodeMirror-line span.cm-attribute,
+#write pre.md-fences .cm-s-inner .CodeMirror-line span.cm-attribute,
+#write .md-fences .cm-s-inner .CodeMirror-line span.cm-tag,
+#write pre.md-fences .cm-s-inner .CodeMirror-line span.cm-tag {
+  color: var(--cgpt-md-syntax-name) !important;
+}
+
+#write .md-fences .cm-s-inner .CodeMirror-line span.cm-string,
+#write pre.md-fences .cm-s-inner .CodeMirror-line span.cm-string,
+#write .md-fences .cm-s-inner .CodeMirror-line span.cm-string-2,
+#write pre.md-fences .cm-s-inner .CodeMirror-line span.cm-string-2 {
+  color: var(--cgpt-md-syntax-string) !important;
+}
+
+#write .md-fences .cm-s-inner .CodeMirror-line span.cm-number,
+#write pre.md-fences .cm-s-inner .CodeMirror-line span.cm-number,
+#write .md-fences .cm-s-inner .CodeMirror-line span.cm-atom,
+#write pre.md-fences .cm-s-inner .CodeMirror-line span.cm-atom {
+  color: var(--cgpt-md-syntax-number) !important;
+}
+
+#write .md-fences .cm-s-inner .CodeMirror-line span.cm-comment,
+#write pre.md-fences .cm-s-inner .CodeMirror-line span.cm-comment {
+  color: var(--cgpt-md-syntax-comment) !important;
+  font-style: italic;
+}
+
+#write .md-fences .cm-s-inner .CodeMirror-line span.cm-meta,
+#write pre.md-fences .cm-s-inner .CodeMirror-line span.cm-meta {
+  color: var(--cgpt-md-syntax-tag) !important;
+}
+
+#write :where(sup.md-footnote a)::before,
+#write sup.md-footnote a::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* Keep the ChatGPT column exact on roomy windows, but avoid edge-to-edge
+   text when Typora is narrower than the desktop message surface. */
+#write {
+  --cgpt-md-safe-inline-padding: 0px;
+  --cgpt-md-table-baseline: min(
+    var(--cgpt-md-active-width),
+    calc(100cqw - (var(--cgpt-md-safe-inline-padding) * 2))
+  );
+}
+
+@container (max-width: 48rem) {
+  #write {
+    --cgpt-md-safe-inline-padding: clamp(16px, 4vw, 24px);
+    padding-left: var(--cgpt-md-safe-inline-padding) !important;
+    padding-right: var(--cgpt-md-safe-inline-padding) !important;
+  }
+}
+
+#write :where(p, li, blockquote, h1, h2, h3, h4, h5, h6, th, td) {
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+#write :where(.TyagGW_tableContainer, figure, .md-table-fig) {
+  box-sizing: border-box;
+  width: calc(100% + (var(--cgpt-md-safe-inline-padding) * 2));
+  max-width: none;
+  margin-left: calc(-1 * var(--cgpt-md-safe-inline-padding));
+  margin-right: calc(-1 * var(--cgpt-md-safe-inline-padding));
+  padding-left: var(--cgpt-md-safe-inline-padding);
+  padding-right: var(--cgpt-md-safe-inline-padding);
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+#write :where(.TyagGW_tableContainer, figure, .md-table-fig) table {
+  min-width: 100%;
+  width: 100%;
+  table-layout: auto;
+  white-space: normal;
+}
+
+#write :where(.TyagGW_tableContainer:has(table tr > :nth-child(4)),
+figure:has(table tr > :nth-child(4)),
+.md-table-fig:has(table tr > :nth-child(4))) table {
+  min-width: 100%;
+  width: fit-content;
+}
+
+#write :where(.TyagGW_tableContainer:has(table tr > :nth-child(4)),
+figure:has(table tr > :nth-child(4)),
+.md-table-fig:has(table tr > :nth-child(4))) :where(th, td) {
+  min-width: calc(var(--cgpt-md-table-baseline) * 4 / 24);
+  max-width: calc(var(--cgpt-md-table-baseline) * 6 / 24);
+}
+
+#write :where(.TyagGW_tableContainer:has(table tr > :nth-child(4)),
+figure:has(table tr > :nth-child(4)),
+.md-table-fig:has(table tr > :nth-child(4))) :where(th[data-chatgpt-col-size="md"], td[data-chatgpt-col-size="md"]) {
+  min-width: calc(var(--cgpt-md-table-baseline) * 6 / 24);
+  max-width: calc(var(--cgpt-md-table-baseline) * 8 / 24);
+}
+
+#write :where(.TyagGW_tableContainer:has(table tr > :nth-child(4)),
+figure:has(table tr > :nth-child(4)),
+.md-table-fig:has(table tr > :nth-child(4))) :where(th[data-chatgpt-col-size="lg"], td[data-chatgpt-col-size="lg"]) {
+  min-width: calc(var(--cgpt-md-table-baseline) * 8 / 24);
+  max-width: calc(var(--cgpt-md-table-baseline) * 12 / 24);
+}
+
+#write :where(.TyagGW_tableContainer:has(table tr > :nth-child(4)),
+figure:has(table tr > :nth-child(4)),
+.md-table-fig:has(table tr > :nth-child(4))) :where(th[data-chatgpt-col-size="xl"], td[data-chatgpt-col-size="xl"]) {
+  min-width: calc(var(--cgpt-md-table-baseline) * 14 / 24);
+  max-width: calc(var(--cgpt-md-table-baseline) * 18 / 24);
+}
