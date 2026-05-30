@@ -1,35 +1,153 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Typora ChatGPT responsive tables</title>
-<link rel="stylesheet" href="../../typora-chatgpt.css">
-<style>
-  * { box-sizing: border-box; }
-  body { margin: 0; background: #f4f4f2; color: #0d0d0d; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-  .page { min-height: 100vh; padding: 56px; }
-  .window { overflow: hidden; border: 1px solid rgba(13,13,13,.12); border-radius: 18px; background: #fff; box-shadow: 0 34px 80px rgba(0,0,0,.16), 0 8px 22px rgba(0,0,0,.08); }
-  .toolbar { height: 46px; display: grid; grid-template-columns: 110px 1fr 110px; align-items: center; padding: 0 16px; border-bottom: 1px solid rgba(13,13,13,.08); background: linear-gradient(#fbfbfb, #f5f5f5); }
-  .traffic { display: flex; gap: 8px; }
-  .traffic span { width: 14px; height: 14px; border-radius: 999px; display: block; }
-  .traffic span:nth-child(1) { background: #ff5f57; border: 1px solid #e0443e; }
-  .traffic span:nth-child(2) { background: #ffbd2e; border: 1px solid #dea123; }
-  .traffic span:nth-child(3) { background: #28c840; border: 1px solid #1aad2b; }
-  .title { text-align: center; color: #6b6b6b; font-size: 14px; font-weight: 500; }
-  .caption { margin: 0 0 22px; color: #5d5d5d; font-size: 18px; line-height: 1.5; }
-  .caption strong { color: #0d0d0d; font-weight: 650; }
-  content { display: block; container-type: inline-size; background: #fff; }
-  .window content { padding: 42px 56px 54px; }
-  #write { padding-bottom: 0 !important; }
-  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
-  .panel { border: 1px solid rgba(13,13,13,.10); border-radius: 18px; background: #fff; box-shadow: 0 18px 50px rgba(0,0,0,.08); overflow: hidden; }
-  .panel-label { padding: 14px 18px; border-bottom: 1px solid rgba(13,13,13,.08); background: #fafafa; color: #5d5d5d; font-size: 13px; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; }
-  .panel content { padding: 30px; }
-  .narrow { width: 430px; }
-  .desktop { width: 760px; }
-  .grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 28px; }
-  .grid .panel content { min-height: 340px; }
-</style></head><body><div class="page"><p class="caption"><strong>Responsive like the ChatGPT Markdown rendering model.</strong> The desktop column stays exact; narrow windows get safe edges and table-local overflow.</p><div class="split"><div class="panel desktop"><div class="panel-label">Desktop content column</div><content><div id="write">
-<h2>Desktop width</h2>
-<p>The default column preserves the ChatGPT desktop message width and wrapping rhythm.</p>
-<table><thead><tr><th>Dimension</th><th>Real assets</th><th>Financial assets</th></tr></thead><tbody><tr><td>Nature</td><td>Capacity to produce goods and services</td><td>Claim on future income or cash flow</td></tr><tr><td>Example</td><td>Land, factories, machines, knowledge</td><td>Stocks, bonds, deposits, fund shares</td></tr></tbody></table></div></content></div><div class="panel narrow"><div class="panel-label">Narrow Typora window</div><content><div id="write">
-<h2>窄窗口也留边界</h2>
-<p>窄窗口下保留 16-24px 安全边界；标准表格按内容列换行，宽表只在表格内部横向滚动。</p>
-<figure><table><thead><tr><th>维度</th><th>实物资产</th><th>金融资产</th><th>补充说明</th><th>例子</th></tr></thead><tbody><tr><td>本质</td><td>生产商品和服务的能力</td><td>对未来收益或现金流的索取权</td><td>宽表局部滚动，不撑开整个页面。</td><td>股票、债券、基金份额、租赁凭证</td></tr></tbody></table></figure></div></content></div></div></div></body></html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Typora ChatGPT responsive table behavior</title>
+  <link rel="stylesheet" href="../../typora-chatgpt.css">
+  <link rel="stylesheet" href="./preview.css">
+</head>
+<body>
+  <main class="stage compact responsive-stage">
+    <div class="caption">
+      <div>
+        <p class="eyebrow">Responsive behavior</p>
+        <h1>Wide notes stay calm. Narrow Typora windows keep breathing room.</h1>
+      </div>
+      <div class="responsive-kpis">
+        <div class="responsive-kpi">
+          <strong>Desktop rhythm</strong>
+          <span>The ChatGPT-like reading column stays stable on roomy windows.</span>
+        </div>
+        <div class="responsive-kpi">
+          <strong>Safe edges</strong>
+          <span>Narrow windows keep 16-24px breathing room instead of edge-to-edge text.</span>
+        </div>
+        <div class="responsive-kpi">
+          <strong>Table overflow</strong>
+          <span>Wide tables scroll locally while normal tables wrap naturally.</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="responsive-poster">
+      <article class="window slim">
+        <div class="toolbar">
+          <div class="traffic"><span></span><span></span><span></span></div>
+          <div class="title">Desktop Typora window</div>
+          <div class="toolbar-meta">10532 words</div>
+        </div>
+        <content>
+          <div id="write">
+            <h2>4.2 Financial assets: claims on future value</h2>
+            <p>与实物资产相对的是金融资产，例如股票和债券。教材强调，这些证券本身可能只是一张纸，甚至只是计算机中的记录，它们并不直接贡献社会生产力。</p>
+            <p>这句话很容易被误解成“金融资产没用”。不是。它们是人们拥有实物资产收益的凭证，是对实物资产收益或政府收益的索取权。</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>维度</th>
+                  <th>实物资产</th>
+                  <th>金融资产</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>本质</td>
+                  <td>生产商品和服务的能力</td>
+                  <td>对未来收益或现金流的索取权</td>
+                </tr>
+                <tr>
+                  <td>是否直接创造社会产出</td>
+                  <td>是</td>
+                  <td>否</td>
+                </tr>
+                <tr>
+                  <td>对个人是否是财富</td>
+                  <td>是</td>
+                  <td>是</td>
+                </tr>
+                <tr>
+                  <td>例子</td>
+                  <td>土地、厂房、机器、知识、技术</td>
+                  <td>股票、债券、存款、基金份额、租赁凭证</td>
+                </tr>
+              </tbody>
+            </table>
+            <blockquote>
+              <p>普通表格在正文列内自然换行；窗口变窄时，正文仍保留安全边界，宽表再交给局部横向滚动。</p>
+            </blockquote>
+          </div>
+        </content>
+      </article>
+
+      <aside class="poster-column">
+        <article class="window slim">
+          <div class="toolbar">
+            <div class="traffic"><span></span><span></span><span></span></div>
+            <div class="title">Narrow window</div>
+            <div class="toolbar-meta">safe edges</div>
+          </div>
+          <content>
+            <div id="write">
+              <h2>窄窗口也留边界</h2>
+              <p>比较窄的时候仍然保留 16-24px 安全边界，而不是贴着窗口挤在一起。</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>维度</th>
+                    <th>实物资产</th>
+                    <th>金融资产</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>本质</td>
+                    <td>生产商品和服务的能力</td>
+                    <td>对未来收益或现金流的索取权</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </content>
+        </article>
+
+        <article class="window slim">
+          <div class="toolbar">
+            <div class="traffic"><span></span><span></span><span></span></div>
+            <div class="title">Wide table</div>
+            <div class="toolbar-meta">local scroll</div>
+          </div>
+          <content>
+            <div id="write">
+              <h2>宽表不撑开页面</h2>
+              <p>列很多时只在表格容器内横向滚动，正文列宽保持稳定。</p>
+              <figure>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>列</th>
+                      <th>字体</th>
+                      <th>间距</th>
+                      <th>换行</th>
+                      <th>溢出</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>窄窗口</td>
+                      <td>16 / 26</td>
+                      <td>安全边界</td>
+                      <td>中英文自然换行</td>
+                      <td>表格内部滚动</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </figure>
+            </div>
+          </content>
+        </article>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

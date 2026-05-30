@@ -10,6 +10,10 @@ A Typora theme that mirrors the current ChatGPT web Markdown style.
 
 Typora ChatGPT is a quiet, single-file Typora theme for people who like the official ChatGPT Markdown reading surface and want the same feel in a local editor. It focuses on the Markdown body: typography, heading rhythm, inline code, code cards, blockquotes, links, citation-style pills, task lists, footnotes, and responsive tables.
 
+![Typora ChatGPT macOS demo](assets/video/typora-chatgpt-demo.gif)
+
+[Download the MP4 demo](assets/video/typora-chatgpt-demo.mp4)
+
 ## Highlights
 
 - Matches the current ChatGPT Markdown body rather than a generic chat-inspired palette.
@@ -22,15 +26,15 @@ Typora ChatGPT is a quiet, single-file Typora theme for people who like the offi
 
 ## Screenshots
 
-### Overview
+### Hero preview
 
 ![Typora ChatGPT overview](assets/screenshots/hero.png)
 
-### Markdown details
+### Markdown sampler
 
 ![Code, quote, link, citation and task list details](assets/screenshots/elements.png)
 
-### Responsive tables
+### Responsive behavior
 
 ![Responsive desktop and narrow table behavior](assets/screenshots/responsive.png)
 
@@ -77,6 +81,7 @@ The responsive table behavior follows the same principle:
 ```text
 typora-chatgpt.css              # theme file
 assets/screenshots/             # README screenshots
+assets/video/                   # README demo video and GIF
 assets/preview/                 # local screenshot preview pages
 sample.md                       # markdown sample for testing the theme
 ```

@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Typora ChatGPT macOS demo</title>
+  <link rel="stylesheet" href="../../typora-chatgpt.css">
+  <link rel="stylesheet" href="./preview.css">
+</head>
+<body>
+  <main class="stage video">
+    <div class="menu-bar">
+      <div class="menu-left"><strong>Typora</strong><span>File</span><span>Edit</span><span>Format</span><span>Theme</span></div>
+      <div class="menu-right"><span>Wi-Fi</span><span>100%</span><span>9:41</span></div>
+    </div>
+
+    <section class="app-shell">
+      <aside class="sidebar">
+        <div class="traffic"><span></span><span></span><span></span></div>
+        <div class="side-title">Documents</div>
+        <div class="file active">sample.md</div>
+        <div class="file">research-note.md</div>
+        <div class="file">table-test.md</div>
+        <div class="side-title">Theme</div>
+        <div class="file active">Typora ChatGPT</div>
+      </aside>
+
+      <section class="editor">
+        <div class="editor-toolbar">
+          <span>sample.md</span>
+          <span class="status-pill">typora-chatgpt.css</span>
+        </div>
+        <div class="scroll-area" id="demo-scroll">
+          <content>
+            <div id="write">
+              <h1>ChatGPT Markdown, inside Typora</h1>
+              <p>Typora ChatGPT mirrors the current ChatGPT web Markdown surface: measured spacing, clean system typography, rounded code cards, dotted links, citation pills, blockquotes, task lists, and responsive tables.</p>
+              <blockquote>
+                <p>The theme focuses on the Markdown body. It keeps Typora local and lightweight while making long notes read like a familiar ChatGPT answer.</p>
+              </blockquote>
+
+              <h2>Research note</h2>
+              <p>与实物资产相对的是金融资产，例如股票和债券。教材强调，这些证券本身可能只是一张纸，甚至只是计算机中的记录，它们并不直接贡献社会生产力。</p>
+              <p>这句话很容易被误解成“金融资产没用”。不是。它们是人们拥有实物资产收益的凭证，是对实物资产收益或政府收益的索取权。</p>
+
+              <table>
+                <thead>
+                  <tr><th>维度</th><th>实物资产</th><th>金融资产</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>本质</td><td>生产商品和服务的能力</td><td>对未来收益或现金流的索取权</td></tr>
+                  <tr><td>是否直接创造社会产出</td><td>是</td><td>否</td></tr>
+                  <tr><td>对个人是否是财富</td><td>是</td><td>是</td></tr>
+                  <tr><td>例子</td><td>土地、厂房、机器、知识、技术</td><td>股票、债券、存款、基金份额、租赁凭证</td></tr>
+                </tbody>
+              </table>
+
+              <h2>Code card</h2>
+              <p>Inline code keeps the quiet gray pill: <code>const theme = "typora-chatgpt"</code>.</p>
+              <pre class="md-fences" mdtype="fences" lang="typescript"><div class="CodeMirror cm-s-inner"><pre class="CodeMirror-line"><span class="cm-keyword">type</span> <span class="cm-def">Theme</span> = {</pre><pre class="CodeMirror-line">  readable: <span class="cm-atom">true</span>;</pre><pre class="CodeMirror-line">  responsiveTables: <span class="cm-atom">true</span>;</pre><pre class="CodeMirror-line">  install: <span class="cm-string">"copy one css file"</span>;</pre><pre class="CodeMirror-line">};</pre></div></pre>
+
+              <h2>Tasks and citations</h2>
+              <p>Source-like links can be styled as compact pills <a class="chatgpt-source-citation-link" data-chatgpt-source-citation="true" data-chatgpt-source-count="+1" href="https://example.com">Theme notes</a>.</p>
+              <ul class="contains-task-list">
+                <li class="task-list-item"><input type="checkbox" checked><p>Readable headings and paragraphs</p></li>
+                <li class="task-list-item"><input type="checkbox" checked><p>Rounded code blocks with tuned syntax color</p></li>
+                <li class="task-list-item"><input type="checkbox" checked><p>Tables that wrap or scroll in the right place</p></li>
+              </ul>
+
+              <h2>Wide table stress test</h2>
+              <figure>
+                <table>
+                  <thead>
+                    <tr><th>Column</th><th>Typography</th><th>Spacing</th><th>Wrapping</th><th>Overflow</th><th>Use case</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Desktop</td><td>16px / 26px</td><td>ChatGPT-like rhythm</td><td>Natural line breaks</td><td>Stays inside the content area</td><td>Specs, research notes, reports</td></tr>
+                    <tr><td>Narrow</td><td>Same body style</td><td>Safe side padding</td><td>Chinese and English text wrap cleanly</td><td>Wide tables scroll locally</td><td>Small Typora windows</td></tr>
+                  </tbody>
+                </table>
+              </figure>
+            </div>
+          </content>
+        </div>
+      </section>
+      <div class="demo-hud">
+        <div class="demo-hud-icon">T</div>
+        <div>
+          <strong>Typora ChatGPT</strong>
+          <span>Markdown preview in a local editor</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("autoplay")) {
+      const scroller = document.getElementById("demo-scroll");
+      const stops = [0, 420, 880, 1340, 1820, 1260, 0];
+      stops.forEach((top, index) => {
+        window.setTimeout(() => {
+          scroller.scrollTo({ top, behavior: "smooth" });
+        }, 700 + index * 1500);
+      });
+    }
+  </script>
+</body>
+</html>

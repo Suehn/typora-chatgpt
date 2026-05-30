@@ -1,38 +1,80 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Typora ChatGPT theme elements</title>
-<link rel="stylesheet" href="../../typora-chatgpt.css">
-<style>
-  * { box-sizing: border-box; }
-  body { margin: 0; background: #f4f4f2; color: #0d0d0d; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-  .page { min-height: 100vh; padding: 56px; }
-  .window { overflow: hidden; border: 1px solid rgba(13,13,13,.12); border-radius: 18px; background: #fff; box-shadow: 0 34px 80px rgba(0,0,0,.16), 0 8px 22px rgba(0,0,0,.08); }
-  .toolbar { height: 46px; display: grid; grid-template-columns: 110px 1fr 110px; align-items: center; padding: 0 16px; border-bottom: 1px solid rgba(13,13,13,.08); background: linear-gradient(#fbfbfb, #f5f5f5); }
-  .traffic { display: flex; gap: 8px; }
-  .traffic span { width: 14px; height: 14px; border-radius: 999px; display: block; }
-  .traffic span:nth-child(1) { background: #ff5f57; border: 1px solid #e0443e; }
-  .traffic span:nth-child(2) { background: #ffbd2e; border: 1px solid #dea123; }
-  .traffic span:nth-child(3) { background: #28c840; border: 1px solid #1aad2b; }
-  .title { text-align: center; color: #6b6b6b; font-size: 14px; font-weight: 500; }
-  .caption { margin: 0 0 22px; color: #5d5d5d; font-size: 18px; line-height: 1.5; }
-  .caption strong { color: #0d0d0d; font-weight: 650; }
-  content { display: block; container-type: inline-size; background: #fff; }
-  .window content { padding: 42px 56px 54px; }
-  #write { padding-bottom: 0 !important; }
-  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
-  .panel { border: 1px solid rgba(13,13,13,.10); border-radius: 18px; background: #fff; box-shadow: 0 18px 50px rgba(0,0,0,.08); overflow: hidden; }
-  .panel-label { padding: 14px 18px; border-bottom: 1px solid rgba(13,13,13,.08); background: #fafafa; color: #5d5d5d; font-size: 13px; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; }
-  .panel content { padding: 30px; }
-  .narrow { width: 430px; }
-  .desktop { width: 760px; }
-  .grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 28px; }
-  .grid .panel content { min-height: 340px; }
-</style></head><body><div class="page"><p class="caption"><strong>Markdown details that make the theme feel familiar.</strong> Code, quotes, links, citations, and tasks use the same quiet visual language.</p><div class="grid"><div class="panel"><div class="panel-label">Code and inline code</div><content><div id="write">
-<h2>Code card</h2>
-<p>Code blocks use the same neutral surface, 24px radius, compact header, and ChatGPT-like syntax colors.</p>
-<pre class="md-fences" mdtype="fences" lang="python"><div class="CodeMirror cm-s-inner"><pre class="CodeMirror-line"><span class="cm-keyword">def</span> <span class="cm-def">summarize</span>(items):</pre><pre class="CodeMirror-line">    <span class="cm-keyword">return</span> <span class="cm-string">", "</span>.join(items)</pre></div></pre>
-<p>Inline code keeps the quiet gray pill: <code>overflow-wrap: break-word</code>.</p></div></content></div><div class="panel"><div class="panel-label">Quotes, links, citations</div><content><div id="write">
-<h2>Notes and citations</h2>
-<p>Blockquotes, dotted links, and citation-style pills stay close to the ChatGPT message body.</p>
-<blockquote><p>Small details matter: quote bars, link underline offset, footnote pills, and task-list marker geometry.</p></blockquote>
-<p>A source pill can be styled inline <a class="chatgpt-source-citation-link" data-chatgpt-source-citation="true" data-chatgpt-source-count="+1" href="https://example.com">AP News</a>.</p>
-<ul class="contains-task-list"><li class="task-list-item"><input type="checkbox" checked><p>Polished task list rows</p></li><li class="task-list-item"><input type="checkbox"><p>Aligned unchecked state</p></li></ul></div></content></div></div></div></body></html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Typora ChatGPT Markdown components</title>
+  <link rel="stylesheet" href="../../typora-chatgpt.css">
+  <link rel="stylesheet" href="./preview.css">
+</head>
+<body>
+  <main class="stage compact">
+    <div class="caption">
+      <div>
+        <p class="eyebrow">Markdown sampler</p>
+        <h1>Everything important on one surface.</h1>
+      </div>
+      <p>Common Typora theme showcases need to prove the details quickly: headings, prose, code, tasks, links, citations, tables, and Chinese text all in the same visual language.</p>
+    </div>
+
+    <section class="component-grid">
+      <article class="component">
+        <div class="component-label">Headings, paragraphs, links</div>
+        <content>
+          <div id="write">
+            <h1>Readable research notes</h1>
+            <p>Typography follows the familiar ChatGPT Markdown cadence: compact headings, clear paragraphs, and dotted links such as <a href="https://typora.io">Typora</a>.</p>
+            <h2>Second-level section</h2>
+            <p>Mixed language content stays even: 中文段落、English prose, inline <code>theme.css</code>, and references all share the same column.</p>
+          </div>
+        </content>
+      </article>
+
+      <article class="component">
+        <div class="component-label">Code block and inline code</div>
+        <content>
+          <div id="write">
+            <h2>Rounded code card</h2>
+            <p>Code blocks use a neutral card with tuned syntax colors and a compact language label.</p>
+            <pre class="md-fences" mdtype="fences" lang="swift"><div class="CodeMirror cm-s-inner"><pre class="CodeMirror-line"><span class="cm-keyword">let</span> <span class="cm-def">theme</span> = <span class="cm-string">"typora-chatgpt"</span></pre><pre class="CodeMirror-line"><span class="cm-keyword">print</span>(<span class="cm-string">"Markdown, rendered locally"</span>)</pre></div></pre>
+          </div>
+        </content>
+      </article>
+
+      <article class="component">
+        <div class="component-label">Quotes, citations, tasks</div>
+        <content>
+          <div id="write">
+            <blockquote>
+              <p>Quote bars, link offsets, task markers, and citation pills are small details that make the page feel familiar.</p>
+            </blockquote>
+            <p>Source-like pill: <a class="chatgpt-source-citation-link" data-chatgpt-source-citation="true" data-chatgpt-source-count="+2" href="https://example.com">Research memo</a></p>
+            <ul class="contains-task-list">
+              <li class="task-list-item"><input type="checkbox" checked><p>Aligned completed task</p></li>
+              <li class="task-list-item"><input type="checkbox"><p>Clean unchecked task</p></li>
+            </ul>
+          </div>
+        </content>
+      </article>
+
+      <article class="component">
+        <div class="component-label">Tables and Chinese wrapping</div>
+        <content>
+          <div id="write">
+            <p>表格内长文本会在内容列里自然换行；过宽表格只在自身区域滚动。</p>
+            <table>
+              <thead>
+                <tr><th>维度</th><th>实物资产</th><th>金融资产</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>本质</td><td>生产商品和服务的能力</td><td>对未来收益或现金流的索取权</td></tr>
+                <tr><td>例子</td><td>土地、厂房、机器</td><td>股票、债券、基金份额</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </content>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
