@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.2 - 2026-05-30
+
+- Updated the macOS demo video to use the cleaner mixed-language table from the hero preview.
+- Adjusted the demo pacing so the table section stays visible longer before scrolling to code and task examples.
+- Kept the sample Markdown aligned with the README showcase table.
+
 ## 1.0.1 - 2026-05-30
 
 - Refreshed the README gallery with richer Markdown sampler screenshots.

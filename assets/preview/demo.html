@@ -39,19 +39,28 @@
                 <p>The theme focuses on the Markdown body. It keeps Typora local and lightweight while making long notes read like a familiar ChatGPT answer.</p>
               </blockquote>
 
-              <h2>Research note</h2>
-              <p>与实物资产相对的是金融资产，例如股票和债券。教材强调，这些证券本身可能只是一张纸，甚至只是计算机中的记录，它们并不直接贡献社会生产力。</p>
-              <p>这句话很容易被误解成“金融资产没用”。不是。它们是人们拥有实物资产收益的凭证，是对实物资产收益或政府收益的索取权。</p>
+              <h2>Mixed language notes</h2>
+              <p>与实物资产相对的是金融资产，例如股票和债券。它们本身可能只是一张纸，甚至只是计算机中的记录，但代表了对未来收益或现金流的索取权。</p>
 
               <table>
                 <thead>
-                  <tr><th>维度</th><th>实物资产</th><th>金融资产</th></tr>
+                  <tr>
+                    <th>Dimension</th>
+                    <th>Real assets</th>
+                    <th>Financial assets</th>
+                  </tr>
                 </thead>
                 <tbody>
-                  <tr><td>本质</td><td>生产商品和服务的能力</td><td>对未来收益或现金流的索取权</td></tr>
-                  <tr><td>是否直接创造社会产出</td><td>是</td><td>否</td></tr>
-                  <tr><td>对个人是否是财富</td><td>是</td><td>是</td></tr>
-                  <tr><td>例子</td><td>土地、厂房、机器、知识、技术</td><td>股票、债券、存款、基金份额、租赁凭证</td></tr>
+                  <tr>
+                    <td>Nature</td>
+                    <td>Capacity to produce goods and services</td>
+                    <td>Claim on future income or cash flow</td>
+                  </tr>
+                  <tr>
+                    <td>Examples</td>
+                    <td>Land, factories, machines, knowledge</td>
+                    <td>Stocks, bonds, deposits, fund shares</td>
+                  </tr>
                 </tbody>
               </table>
 
@@ -97,7 +106,7 @@
     const params = new URLSearchParams(window.location.search);
     if (params.has("autoplay")) {
       const scroller = document.getElementById("demo-scroll");
-      const stops = [0, 420, 880, 1340, 1820, 1260, 0];
+      const stops = [0, 0, 360, 775, 520, 0];
       stops.forEach((top, index) => {
         window.setTimeout(() => {
           scroller.scrollTo({ top, behavior: "smooth" });

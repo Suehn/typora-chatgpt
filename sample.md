@@ -4,9 +4,16 @@ Typora ChatGPT mirrors the current ChatGPT web Markdown surface: measured spacin
 
 > The theme focuses on the Markdown body. It keeps Typora local and lightweight while making long notes read like a familiar ChatGPT answer.
 
-## Research note
+## Mixed language notes
 
-与实物资产相对的是金融资产，例如股票和债券。教材强调，这些证券本身可能只是一张纸，甚至只是计算机中的记录，它们并不直接贡献社会生产力。
+与实物资产相对的是金融资产，例如股票和债券。它们本身可能只是一张纸，甚至只是计算机中的记录，但代表了对未来收益或现金流的索取权。
+
+| Dimension | Real assets | Financial assets |
+| --- | --- | --- |
+| Nature | Capacity to produce goods and services | Claim on future income or cash flow |
+| Examples | Land, factories, machines, knowledge | Stocks, bonds, deposits, fund shares |
+
+## Responsive table stress test
 
 这句话很容易被误解成“金融资产没用”。不是。它们是人们拥有实物资产收益的凭证，是对实物资产收益或政府收益的索取权。
 
