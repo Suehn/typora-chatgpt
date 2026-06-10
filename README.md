@@ -21,7 +21,7 @@ Typora ChatGPT is a quiet, single-file Typora theme for people who like the offi
 - Recreates ChatGPT-like inline code pills and rounded code cards with tuned syntax colors.
 - Keeps blockquotes, task lists, links, footnotes, and citation pills visually close to ChatGPT.
 - Handles narrow Typora windows with safe side padding while preserving the desktop message column on roomy windows.
-- Keeps standard tables wrapping naturally and wide tables scrolling locally instead of stretching the whole page.
+- Keeps Markdown pipe tables on the WACZ root Markdown table model with local horizontal scrolling when columns exceed the reading width.
 - Ships as one CSS file. No build step, no font download, no plugin required.
 
 ## Screenshots
@@ -69,12 +69,14 @@ Tested on macOS with Typora's current editor DOM. The theme is CSS-only, so it s
 
 Typora ChatGPT is intentionally focused on Markdown rendering, not the whole ChatGPT product interface. It does not copy chat controls, sidebars, buttons, or application chrome. The goal is simple: make Markdown documents in Typora read like the official ChatGPT Markdown surface.
 
-The responsive table behavior follows the same principle:
+The responsive table behavior follows the same principle as the latest Scopy WACZ contract:
 
 - roomy windows keep the desktop-style content column;
 - narrow windows keep a readable side boundary;
-- ordinary tables wrap inside the content column;
-- wide tables scroll inside their own container.
+- every Markdown pipe table shares the same root Markdown column model;
+- tables scroll inside their own container when that model exceeds the visible reading width.
+
+Typora themes are CSS-only, so unannotated table cells use ChatGPT's root Markdown `sm` column bucket. Generated previews or future Typora extensions can opt into the larger WACZ buckets with `data-col-size="md"`, `lg`, or `xl`.
 
 ## File list
 

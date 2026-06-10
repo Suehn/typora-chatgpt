@@ -21,7 +21,7 @@ Typora ChatGPT 是一个单 CSS 文件主题，目标是让本地 Typora 的 Mar
 - 复刻灰色 inline code pill、24px 圆角代码卡和清爽语法色。
 - 引用、任务列表、链接、脚注和来源 pill 都保持 ChatGPT 式克制风格。
 - 窄窗口保留 16-24px 安全边界，避免内容贴边。
-- 标准表格按正文列宽自然换行；宽表只在表格内部横向滚动，不撑开整个页面。
+- Markdown pipe table 统一走 WACZ root Markdown 表格模型；当列宽超过阅读区时，只在表格内部横向滚动。
 - 单文件安装，不需要构建、不需要插件、不依赖远程字体。
 
 ## 截图
@@ -69,12 +69,14 @@ curl -L https://raw.githubusercontent.com/Suehn/typora-chatgpt/main/typora-chatg
 
 Typora ChatGPT 只关注 Markdown 正文渲染，不复制 ChatGPT 的产品界面、侧边栏、按钮或聊天控件。目标很明确：让 Typora 文档读起来像 ChatGPT 官网里的 Markdown 正文。
 
-响应式表格遵循同一套逻辑：
+响应式表格遵循最新 Scopy WACZ 契约里的同一套逻辑：
 
 - 宽窗口保持桌面内容列宽；
 - 窄窗口保留可读边界；
-- 普通表格在正文列内换行；
-- 宽表只在自身容器内横向滚动。
+- 所有 Markdown pipe table 使用同一套 root Markdown 列宽模型；
+- 当这套模型超过可见阅读宽度时，表格只在自身容器内横向滚动。
+
+Typora 主题本身是纯 CSS，不能像 Scopy WebView 那样运行 JS 测量每列文本长度；未标注的表格单元格使用 ChatGPT root Markdown 的 `sm` 桶。预览夹具或未来 Typora 扩展可以通过 `data-col-size="md"`、`lg`、`xl` 启用更大的 WACZ 桶。
 
 ## 文件结构
 

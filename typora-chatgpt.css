@@ -11,6 +11,7 @@
   --cgpt-md-width-expanded: 768px;
   --cgpt-md-width: var(--cgpt-md-width-expanded);
   --cgpt-md-active-width: var(--cgpt-md-width);
+  --cgpt-md-table-baseline: var(--cgpt-md-width-expanded);
   --cgpt-md-code-bg: rgb(236, 236, 236);
   --cgpt-md-code-card-bg: rgb(249, 249, 249);
   --cgpt-md-code-card-border: rgba(13, 13, 13, 0.05);
@@ -452,10 +453,10 @@
 #write :where(table) {
   border-collapse: separate;
   border-spacing: 0px;
-  font-size: 14px;
-  line-height: 24.0001px;
-  min-width: var(--cgpt-md-active-width);
-  width: 100%;
+  font-size: 16px;
+  line-height: 26px;
+  min-width: 100%;
+  width: fit-content;
 }
 
 
@@ -1160,7 +1161,7 @@ li.md-task-list-item > input[type="checkbox"]:checked)::after {
   border-collapse: separate;
   border-spacing: 0;
   min-width: 100%;
-  width: 100%;
+  width: fit-content;
   max-width: none;
   table-layout: auto;
   overflow: visible;
@@ -1168,8 +1169,8 @@ li.md-task-list-item > input[type="checkbox"]:checked)::after {
   margin: 0;
   color: var(--cgpt-md-text);
   font-family: var(--cgpt-md-font);
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 26px;
 }
 
 #write :where(th, td) {
@@ -1183,7 +1184,7 @@ li.md-task-list-item > input[type="checkbox"]:checked)::after {
 }
 
 #write :where(th:not(:first-child), td:not(:first-child)) {
-  padding-inline-start: 8px;
+  padding-inline-start: 0;
 }
 
 #write :where(th:not(:last-child), td:not(:last-child)) {
@@ -1191,7 +1192,7 @@ li.md-task-list-item > input[type="checkbox"]:checked)::after {
 }
 
 #write :where(th:last-child, td:last-child) {
-  padding-inline-end: 40px;
+  padding-inline-end: 0;
 }
 
 #write :where(thead th) {
@@ -1443,10 +1444,7 @@ a[data-chatgpt-source-citation="true"][data-chatgpt-source-count])::after {
    text when Typora is narrower than the desktop message surface. */
 #write {
   --cgpt-md-safe-inline-padding: 0px;
-  --cgpt-md-table-baseline: min(
-    var(--cgpt-md-active-width),
-    calc(100cqw - (var(--cgpt-md-safe-inline-padding) * 2))
-  );
+  --cgpt-md-table-baseline: var(--cgpt-md-width-expanded);
 }
 
 @container (max-width: 48rem) {
@@ -1477,42 +1475,34 @@ a[data-chatgpt-source-citation="true"][data-chatgpt-source-count])::after {
 
 #write :where(.TyagGW_tableContainer, figure, .md-table-fig) table {
   min-width: 100%;
-  width: 100%;
+  width: fit-content;
   table-layout: auto;
   white-space: normal;
 }
 
-#write :where(.TyagGW_tableContainer:has(table tr > :nth-child(4)),
-figure:has(table tr > :nth-child(4)),
-.md-table-fig:has(table tr > :nth-child(4))) table {
-  min-width: 100%;
-  width: fit-content;
-}
-
-#write :where(.TyagGW_tableContainer:has(table tr > :nth-child(4)),
-figure:has(table tr > :nth-child(4)),
-.md-table-fig:has(table tr > :nth-child(4))) :where(th, td) {
+/* WACZ root Markdown pipe-table model. Typora themes are CSS-only, so
+   unannotated cells use the root `sm` bucket; generated/preview fixtures can
+   opt into the exact WACZ buckets with `data-col-size` or
+   `data-chatgpt-col-size`. */
+#write :where(th, td) {
   min-width: calc(var(--cgpt-md-table-baseline) * 4 / 24);
   max-width: calc(var(--cgpt-md-table-baseline) * 6 / 24);
 }
 
-#write :where(.TyagGW_tableContainer:has(table tr > :nth-child(4)),
-figure:has(table tr > :nth-child(4)),
-.md-table-fig:has(table tr > :nth-child(4))) :where(th[data-chatgpt-col-size="md"], td[data-chatgpt-col-size="md"]) {
+#write :where(th[data-col-size="md"], td[data-col-size="md"],
+th[data-chatgpt-col-size="md"], td[data-chatgpt-col-size="md"]) {
   min-width: calc(var(--cgpt-md-table-baseline) * 6 / 24);
   max-width: calc(var(--cgpt-md-table-baseline) * 8 / 24);
 }
 
-#write :where(.TyagGW_tableContainer:has(table tr > :nth-child(4)),
-figure:has(table tr > :nth-child(4)),
-.md-table-fig:has(table tr > :nth-child(4))) :where(th[data-chatgpt-col-size="lg"], td[data-chatgpt-col-size="lg"]) {
+#write :where(th[data-col-size="lg"], td[data-col-size="lg"],
+th[data-chatgpt-col-size="lg"], td[data-chatgpt-col-size="lg"]) {
   min-width: calc(var(--cgpt-md-table-baseline) * 8 / 24);
   max-width: calc(var(--cgpt-md-table-baseline) * 12 / 24);
 }
 
-#write :where(.TyagGW_tableContainer:has(table tr > :nth-child(4)),
-figure:has(table tr > :nth-child(4)),
-.md-table-fig:has(table tr > :nth-child(4))) :where(th[data-chatgpt-col-size="xl"], td[data-chatgpt-col-size="xl"]) {
+#write :where(th[data-col-size="xl"], td[data-col-size="xl"],
+th[data-chatgpt-col-size="xl"], td[data-chatgpt-col-size="xl"]) {
   min-width: calc(var(--cgpt-md-table-baseline) * 14 / 24);
   max-width: calc(var(--cgpt-md-table-baseline) * 18 / 24);
 }

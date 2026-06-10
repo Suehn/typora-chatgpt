@@ -13,6 +13,18 @@ Typora ChatGPT mirrors the current ChatGPT web Markdown surface: measured spacin
 | Nature | Capacity to produce goods and services | Claim on future income or cash flow |
 | Examples | Land, factories, machines, knowledge | Stocks, bonds, deposits, fund shares |
 
+## WACZ root table model check
+
+Scopy 的最新 WACZ 契约不再把 Markdown pipe table 分成“普通表”和“宽表”两套模型；所有 pipe table 都先走 root Markdown 表格模型，再由表格容器处理横向溢出。
+
+| 项目 | 今日判断 |
+| --- | --- |
+| 是否出现可买级 Alpha | 有“回撤买入池 / 小仓验证池”，无追高买入级 |
+| 今日最高分候选 | 康方生物 84；Lumentum 83；STMicro / HPE 82；AI capex 供应链 81 |
+| 今日新增最重要变化 | AI 半导体杀估值、Marvell/Flex 纳入 S&P 500、Alphabet 股权融资、DeepSeek 融资、NVIDIA 机器人/HBM4 信号 |
+| 最大风险 | AI 硬件链从“有增长就涨”切换到“必须持续超预期”；估值、同因子拥挤、客户集中、融资稀释同时进入红队区间 |
+| 今日动作 | 不追涨，不一篮子抄底；只跟踪订单、收入、毛利率、现金流、客户认证同时闭环的二阶/三阶瓶颈资产 |
+
 ## Responsive table stress test
 
 这句话很容易被误解成“金融资产没用”。不是。它们是人们拥有实物资产收益的凭证，是对实物资产收益或政府收益的索取权。

@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.3 - 2026-06-10
+
+- Realigned table CSS with Scopy's latest WACZ root Markdown pipe-table model.
+- Removed the old 4-column wide-table heuristic so all Markdown pipe tables share one column model.
+- Switched table typography back to the ChatGPT body rhythm and restored the root Markdown padding model.
+- Kept local horizontal scrolling for table overflow and retained optional `data-col-size` / `data-chatgpt-col-size` hooks for generated fixtures.
+
 ## 1.0.2 - 2026-05-30
 
 - Updated the macOS demo video to use the cleaner mixed-language table from the hero preview.
